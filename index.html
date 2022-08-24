@@ -1,0 +1,63 @@
+<!--
+ * @Author: error: git config user.name && git config user.email & please set dead value or install git
+ * @Date: 2022-05-24 13:17:55
+ * @LastEditors: your name
+ * @LastEditTime: 2022-05-28 23:14:52
+ * @FilePath: \web\条形码实验\index.html
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
+
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>条码</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+    <div class="my-container">
+        <h1>GS1-128条形码识别</h1>
+        <h3>识别计算过程请打开浏览器控制台</h3>
+        <div class="pic-res">
+
+            <div class="pic">
+                    <img  id="picture"  src="./img/demo.svg" alt="">
+            </div>
+
+            <div class="res">
+                <div id="result-text">
+                    <h3>识别结果</h3>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="my-btn">
+
+            <div class="dropdown">
+                <button class="dropbtn">示例条码</button>
+                <div class="dropdown-content">
+                    <a onclick="example(1)">条码 1</a>
+                    <a onclick="example(2)">条码 2</a>
+                    <a onclick="example(3)">条码 3</a>
+                </div>
+            </div>
+
+            <a href="javascript:;" class="file">上传图片
+                <input type="file" accept="image/*" onchange="previewHandle(this)">
+            </a>
+
+            <button id="btn-decode" onclick="decode()">解码</button>
+        </div>
+
+    </div>
+    <script src="./js/example.js"></script>
+    <script src="./js/uploading.js"></script>
+    <script src="./js/decode.js"></script>
+</body>
+
+</html>
